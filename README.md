@@ -1,6 +1,5 @@
 # ToDoList
-To-Do List Front-End Proje Tanıtım Yazısı:
-Proje Adı: To-Do List Front-End Uygulaması
+To-Do List 
 
 Proje Açıklaması: Bu proje, kullanıcıların günlük görevlerini kolayca yönetebileceği ve organize edebileceği bir To-Do List uygulamasının front-end kısmını içermektedir. Modern ve kullanıcı dostu bir arayüz sunan bu uygulama, kullanıcıların görev eklemesine, düzenlemesine, tamamlanmış görevleri işaretlemesine ve gerektiğinde silmesine olanak tanır.
 
