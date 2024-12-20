@@ -1,0 +1,210 @@
+/* Renk dönüşümü animasyonu tanımı */
+@keyframes colorful {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Temel stil sıfırlama */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  appearance: none;
+  border-style: none;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Başlık ve paragraf elementleri için yazı tipi tanımı */
+h1, h2, h3, span, p {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Sayfa genelinde kutu modeli tanımı */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Sayfa genelinde stil tanımları */
+body {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  background-color: #000000;
+}
+
+/* Dikey kaydırma çubuğu stillemesi */
+body::-webkit-scrollbar {
+  background: white;
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: white;
+}
+body::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 1px;
+}
+
+/* Ana konteynır stillemesi */
+body .container {
+  position: relative;
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+/* Kart stillemesi */
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 1em;
+  background-color: white;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(40px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 0px 10px 10px rgba(214, 0, 0, 0.03);
+}
+
+/* Kart içeriği stillemesi */
+.container .card .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+/* Kart içeriği resim stillemesi */
+.container .card .content .img {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+
+/* Kart içeriği resim etiketi stillemesi */
+.container .card .content .img img {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Kart içeriği başlık stillemesi */
+body .container .card .content .cardContent h3 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+/* Kart içeriği başlık alt başlık stillemesi */
+body .container .card .content .cardContent h3 span {
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: initial;
+}
+
+/* Kart üzerine gelindiğinde içeriğin stillemesi */
+body .container .card:hover .content {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+/* Üstbilgi stillemesi */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10px auto;
+}
+
+/* Üstbilgi sol tarafı (logo) stillemesi */
+header .left-side a img {
+  width: 80px;
+}
+
+/* Üstbilgi sağ tarafı (navigasyon) stillemesi */
+header .right-side {
+  display: flex;
+}
+
+/* Navigasyon bağlantıları stillemesi */
+header .right-side .nav-link-wrapper a {
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container, .card {
+    width: 100%; /* Tüm kartların ve konteynırın ekran genişliğine uyum sağlaması */
+    padding: 10px;
+  }
+
+  header, .card .content, body .container .card {
+    flex-direction: column; /* Yatay yerine dikey hizalama */
+  }
+
+  header .right-side .nav-link-wrapper a {
+    font-size: smaller; /* Daha küçük font boyutu */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column; /* Navigasyon öğelerini dikey hizalama */
+  }
+
+  .card {
+    width: 90%; /* Kart genişliğini azaltma */
+  }
+
+  .container .card .content .img {
+    width: 120px; /* Resim boyutunu küçültme */
+    height: 120px;
+  }
+}

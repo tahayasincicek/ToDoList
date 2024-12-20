@@ -1,0 +1,2 @@
+Live link: https://xhymie.github.io/TodoApp/
+Github repo link: https://github.com/Xhymie/TodoApp

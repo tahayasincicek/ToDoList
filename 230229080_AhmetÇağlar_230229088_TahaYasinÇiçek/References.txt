@@ -1,0 +1,16 @@
+<!-- 230229080_AhmetÇağlar 230229088_TahaYasinÇiçek -->
+https://www.w3schools.com/js/js_strict.asp
+
+https://www.w3schools.com/jsref/default.asp
+
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+https://www.w3schools.com/jsref/prop_win_localstorage.asp
+
+https://engineering.teknasyon.com/local-storage-ve-session-storage-nedir-7d913a6b5651
+
+https://www.w3schools.com/css/css_font.asp
+
+https://www.w3schools.com/css/css_navbar.asp
+
+https://www.w3schools.com/html/html_images.asp

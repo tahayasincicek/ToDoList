@@ -1,0 +1,352 @@
+/* 230229080_AhmetÇağlar 230229088_TahaYasinÇiçek
+/* Tüm öğelerin varsayılan margin ve padding değerlerini sıfırla */
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Sayfa stili */
+body{
+  overflow-x: hidden; /* Yatay kaydırma çubuğunu gizle */
+  background-color: black; /* Arka plan rengini ayarla */
+}
+
+/* Başlık stili */
+header{
+  display: flex; /* Başlık içeriğini bir flex konteynerinde görüntüle */
+  align-items: center; /* Öğeleri dikey hizala */
+  justify-content: space-between; /* Öğeler arasında eşit boşluk bırakarak dağıt */
+  width: 90%; /* Başlık genişliğini ayarla */
+  margin: 10px auto; /* Başlığı yatayda ortala ve 10px üst-alt boşluk ekle */
+}
+
+/* Başlığın sol tarafındaki logonun stili */
+header .left-side a img{
+  width: 150px; /* Logo resminin genişliğini ayarla */
+}
+
+/* Başlığın sağ tarafındaki gezinme bağlantılarının stili */
+header .right-side{
+  display: flex; /* Gezinme bağlantılarını flex öğeleri olarak görüntüle */
+}
+
+/* Her bir gezinme bağlantısının stili */
+header .right-side .nav-link-wrapper a{
+  padding: 10px; /* Gezinme bağlantılarının etrafına dolgular ekle */
+  margin: 10px; /* Gezinme bağlantıları arasına margin ekle */
+  text-decoration: none; /* Bağlantılardaki alt çizgiyi kaldır */
+  color: rgb(255, 255, 255); /* Metin rengini beyaz olarak ayarla */
+  font-size: x-large; /* Yazı tipi boyutunu ayarla */
+  font-weight: bold; /* Yazı tipi kalınlığını kalın yap */
+}
+
+/* İçerik konteynerinin stili */
+.container{
+  max-width: 80%; /* Konteynerin maksimum genişliğini ayarla */
+  margin: 50px auto; /* Konteyneri yatayda ortala ve 50px üst-alt boşluk ekle */
+}
+
+/* Konteynerin sol tarafındaki içeriğin stili */
+.container .left-side{
+  text-align: center; /* Metni ortala */
+}
+
+/* Sol taraf içeriğindeki başlığın stili */
+.container .left-side h1{
+  font-size: 35px; /* Başlık yazı tipi boyutunu ayarla */
+  font-weight: bold; /* Yazı tipi kalınlığını kalın yap */
+  letter-spacing: 2px; /* Harf aralığını ayarla */
+  color: white; /* Metin rengini beyaz olarak ayarla */
+}
+
+/* Başlık içindeki bilgi metni stilinin stili */
+.container .left-side h1 .information{
+  color: white; /* Metin rengini beyaz olarak ayarla */
+  font-family: 'Viga', serif; /* Yazı tipi ailesini ayarla */
+}
+
+/* Sol taraf içeriğindeki paragraf metnin stili */
+.container .left-side p{
+  font-size: 20px; /* Paragraf yazı tipi boyutunu ayarla */
+  letter-spacing: 0.5px; /* Harf aralığını ayarla */
+  color: white; /* Metin rengini beyaz olarak ayarla */
+}
+
+/* Sol taraf içeriğindeki eylem düğmesinin stili */
+.container .left-side a{
+  display: inline-block; /* İnline-block olarak görüntüleme sağla */
+  background: white; /* Arkaplan rengini ayarla */
+  padding: 12px 18px 12px 18px; /* Dolguları ayarla */
+  text-decoration: none; /* Bağlantıdaki alt çizgiyi kaldır */
+  border-radius: 25px; /* Kenar yarıçapını ayarla */
+  color: black; /* Metin rengini siyah olarak ayarla */
+  margin-top: 15px; /* Üst kısmına margin ekle */
+  font-size: 17px; /* Yazı tipi boyutunu ayarla */
+  font-weight: bold; /* Yazı tipi kalınlığını kalın yap */
+}
+
+/* Konteynerin sağ tarafındaki içeriğin stili */
+.container .right-side{
+  text-align: center; /* Metni ortala */
+  margin-top: 60px; /* Üst kısmına margin ekle */
+}
+
+/* Sağ taraf içeriğindeki resimlerin stili */
+.container .right-side img{
+  max-width: 50%; /* Resimlerin maksimum genişliğini ayarla */
+}
+
+/* Başparmak resimlerinin stili */
+.thumb{
+  display: flex; /* Başparmakları bir flex öğeleri olarak görüntüle */
+  margin-top: -60px; /* Yukarıdaki içerikle örtüşmek için margin ayarla */
+  justify-content: center; /* Başparmakları ortala */
+}
+
+/* Her bir başparmak resminin stili */
+.thumb a:hover{
+  margin-top: -15px; /* Hareketli efekt için hover sırasında margin ayarla */
+  transition: 0.2s; /* Geçiş efekti ekle */
+}
+
+/* Başparmak resimlerinin stili */
+.thumb img{
+  width: 54px; /* Başparmak resimlerinin genişliğini ayarla */
+  margin: 20px; /* Başparmak resimleri etrafına margin ekle */
+}
+
+/* Büyük ekranlar için medya sorgusu */
+@media (min-width: 1140px){
+  /* Tüm öğelerin varsayılan margin ve padding değerlerini sıfırla */
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  /* Yatay kaydırma çubuğunu gizle */
+  body{
+    overflow-x: hidden;
+  }
+
+  /* Büyük ekranlar için başlık stili */
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  /* Logonun boyutunu büyük ekranlar için ayarla */
+  header .left-side a img{
+    width: 80px;
+  }
+
+  /* Gezinme bağlantılarını flex öğeleri olarak görüntüle */
+  header .right-side{
+    display: flex;
+  }
+
+  /* Her bir gezinme bağlantısının stili */
+  header .right-side .nav-link-wrapper a{
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+
+  /* Büyük ekranlar için konteyner stili */
+  .container{
+    max-width: 90%; /* Konteynerin maksimum genişliğini artır */
+    margin: 50px auto; /* Konteyneri yatayda ortala ve 50px üst-alt boşluk ekle */
+    display: flex; /* İçeriği flex öğeleri olarak görüntüle */
+  }
+
+  /* Sol taraf içeriğinin stili büyük ekranlar için */
+  .container .left-side{
+    text-align: left; /* Metni sola hizala */
+    flex: 1; /* Esnek boyutlandırmayı etkinleştir */
+  }
+
+  /* Sol taraf içeriğindeki başlığın stili büyük ekranlar için */
+  .container .left-side h1{
+    font-size: 35px; /* Başlık yazı tipi boyutunu ayarla */
+    font-weight: bold; /* Yazı tipi kalınlığını kalın yap */
+    letter-spacing: 2px; /* Harf aralığını ayarla */
+    color: white; /* Metin rengini beyaz olarak ayarla */
+  }
+
+
+
+  /* Sol taraftaki içeriğin başlığındaki .information sınıfı için stil */
+.container .left-side h1 .information{
+  color: white; /* Metin rengini beyaz olarak ayarla */
+  font-family: 'Viga', serif; /* Yazı tipi ailesini 'Viga' ve serif olarak ayarla */
+}
+
+/* Sol taraftaki içeriğin paragraf etiketleri için stil */
+.container .left-side p{
+  font-size: 20px; /* Yazı tipi boyutunu ayarla */
+  color: white; /* Metin rengini beyaz olarak ayarla */
+  letter-spacing: 0.5px; /* Harf aralığını ayarla */
+}
+
+/* Sol taraftaki içeriğin bağlantıları için stil */
+.container .left-side a{
+  display: inline-block; /* İnline-block olarak görüntüleme sağla */
+  background: white; /* Arkaplan rengini beyaz olarak ayarla */
+  padding: 12px 18px 12px 18px; /* Dolguları ayarla */
+  text-decoration: none; /* Bağlantıdaki alt çizgiyi kaldır */
+  border-radius: 25px; /* Kenar yarıçapını ayarla */
+  color: black; /* Metin rengini siyah olarak ayarla */
+  margin-top: 15px; /* Üst kısmına margin ekle */
+  font-size: 17px; /* Yazı tipi boyutunu ayarla */
+  font-weight: bold; /* Yazı tipi kalınlığını kalın yap */
+}
+
+/* Sağ taraftaki içeriğin konteyneri için stil */
+.container .right-side{
+  flex: 1; /* Flex öğesinin esnek boyutunu ayarla */
+  text-align: center; /* Metni ortala */
+}
+
+/* Sağ taraftaki içeriğin resimleri için stil */
+.container .right-side img{
+  width: 330px; /* Resim genişliğini ayarla */
+  margin-left: 150px; /* Sol kenara boşluk ekle */
+  margin-top: -30px; /* Üst kısmına boşluk ekle */
+}
+
+/* Başparmaklar için stil */
+.thumb{
+  position: absolute; /* Pozisyonu mutlak olarak ayarla */
+  bottom: 0%; /* Alt kenara yasla */
+  left: 40%; /* Sol kenara yasla */
+}
+
+/* Başparmak resimlerinin hover efekti stilini tanımla */
+.thumb a:hover{
+  margin-top: -15px; /* Yukarıya doğru hareket ettir */
+  transition: 0.2s; /* Geçiş efekti ekle */
+}
+
+/* Başparmak resimlerinin genel stilini tanımla */
+.thumb img{
+  width: 54px; /* Genişliği ayarla */
+  margin: 20px; /* Kenarlara boşluk ekle */
+}
+
+/* Ekran boyutlarına göre medya sorguları */
+@media only screen and (max-width: 650px){
+  /* Başlık için stil */
+  header{
+      display: block; /* Blok olarak görüntüle */
+    }
+  
+  /* Logonun stilini ayarla */
+  header .left-side a img{
+      width: 80px; /* Genişlik ayarla */
+      margin: auto; /* Otomatik kenara hizala */
+      display: block; /* Blok olarak görüntüle */
+    }
+  
+  /* Sağ taraftaki içerik için stil */
+  .container .right-side{
+      display: flex; /* Flex öğesini görüntüle */
+      justify-content: center; /* İçeriği ortala */
+      margin-top: 35px; /* Üst kısmına boşluk ekle */
+    }
+  
+  /* Gezinme bağlantıları için stil */
+  header .right-side .nav-link-wrapper a{
+      padding: 10px;
+      margin: 10px;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+  
+  /* Sol taraftaki içeriğin başlık stilini ayarla */
+  .container .left-side h1{
+      font-size: 35px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: white;
+    }
+  
+  /* Sol taraftaki içeriğin bilgi metni stilini ayarla */
+  .container .left-side h1 .information{
+      color: white;
+      font-family: 'Viga', serif;
+    }
+  
+  /* Sol taraftaki içeriğin paragraf stilini ayarla */
+  .container .left-side p{
+      font-size: 18px;
+      color: white;
+      letter-spacing: 0.5px;
+    }
+  
+  /* Sol taraftaki içeriğin bağlantılarının stilini ayarla */
+  .container .left-side a{
+      display: inline-block;
+      background: black; /* Arka plan rengini siyah yap */
+      color: white; /* Metin rengini beyaz yap */
+      font-size: 16.2px; /* Yazı tipi boyutunu ayarla */
+    }
+}
+
+/* Küçük ekranlar için medya sorgusu */
+@media only screen and (max-width: 404px){
+  /* Başlık için stil */
+  header{
+      display: block; /* Blok olarak görüntüle */
+    }
+  
+  /* Logonun stilini ayarla */
+  header .left-side a img{
+      width: 80px; /* Genişlik ayarla */
+      margin: auto; /* Otomatik kenara hizala */
+      display: block; /* Blok olarak görüntüle */
+    }
+  
+  /* Sağ taraftaki içerik için stil */
+  .container .right-side{
+      display: flex; /* Flex öğesini görüntüle */
+      justify-content: center; /* İçeriği ortala */
+      margin-top: 35px; /* Üst kısmına boşluk ekle */
+    }
+  
+  /* Gezinme bağlantıları için stil */
+  header .right-side .nav-link-wrapper a{
+      padding: 5px;
+      margin: 5px;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+  
+  /* Sağ taraftaki içerik resimlerinin stilini ayarla */
+  .container .right-side img{
+      width: 330px; /* Genişlik ayarla */
+      margin-top: -30px; /* Üst kısmına boşluk ekle */
+    }
+  
+  /* Başparmaklar için stil */
+  .thumb{
+      display: flex; /* Flex öğesini görüntüle */
+      margin-top: -30px; /* Üst kısmına boşluk ekle */
+      justify-content: center; /* İçeriği ortala */
+    }
+  
+  /* Başparmak resimlerinin hover efekti stilini tanımla */
+  .thumb a:hover{
+      margin-top: -15px; /* Yukarıya doğru hareket ettir */
+      transition: 0.2s; /* Geçiş efekti ekle */
+    }
+  
+  /* Başparmak resimlerinin genel stilini tanımla */
+  .thumb img{
+      width: 45px; /* Genişliği ayarla */
+      margin: 20px; /* Kenarlara boşluk ekle */
+    }
+}
+}

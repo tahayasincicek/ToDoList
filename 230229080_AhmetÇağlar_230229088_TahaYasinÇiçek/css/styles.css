@@ -1,0 +1,141 @@
+/* Sayfa arkaplanı ve yazı tipi ayarları */
+body {
+    background-color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Dropdown oku gizleme */
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* Üstbilgi stillemesi */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 10px auto;
+    padding: 0 1rem 1rem;
+}
+
+/* Üstbilgi sağ tarafı (navigasyon) */
+header .right-side {
+    display: flex;
+}
+
+/* Navigasyon bağlantıları */
+header .right-side .nav-link-wrapper a {
+    padding: 15px;
+    margin: 15px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+/* Ana konteynır stillemesi */
+.container {
+    width: 90%; /* Genişlik % cinsinden ayarlandı */
+    max-width: 600px; /* Maksimum genişlik sınırı */
+    margin: 15rem auto;
+    padding: 2.5rem;
+    border-radius: 15px;
+    justify-content: center;
+}
+
+/* Tarih ve saat bloğu stillemesi */
+.date-hour {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem 1.5rem 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    color: #d69b06;
+}
+
+/* Tarih seçimi bloğu stillemesi */
+.datesp {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+}
+
+/* Tarih seçimi ve saat seçimi bloğu alt kenar çizgisi */
+#datep, #hourp {
+    border-bottom: solid 4px black;
+}
+
+/* Görevlerin stillemesi */
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Seçilmiş görevin stillemesi */
+.task label.checked {
+    text-decoration: line-through;
+}
+
+/* Kontrollerin stillemesi */
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Filtrelerin stillemesi */
+.filters span.active {
+    color: #3C87FF;
+}
+
+.filters span {
+    margin-right: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Kart başlığı stillemesi */
+.container .row .col-12 .card .card-header {
+    font-weight: bold;
+    font-size: 30px;
+    border-left: 2px solid red;
+    margin-left: 20px;
+}
+
+/* Media Queries: Ekran boyutlarına göre ayarlar */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    header .right-side {
+        margin-top: 20px;
+    }
+    .container {
+        width: 95%;
+        padding: 2rem;
+        margin: 2rem auto;
+    }
+    .date-hour, .datesp {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    header .right-side .nav-link-wrapper a {
+        font-size: medium;
+    }
+    .date-hour, .datesp {
+        padding: 1rem;
+    }
+    .task, .controls, .filters span {
+        font-size: 12px;
+    }
+}
